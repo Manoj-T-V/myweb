@@ -32,6 +32,19 @@
 
 <body>
 
+  <!-- ======= Loading Animation ======= -->
+  <div id="preloader">
+    <div class="loader">
+      <div class="spinner"></div>
+      <p>Loading...</p>
+    </div>
+  </div>
+
+  <!-- ======= Scroll Progress Indicator ======= -->
+  <div id="scroll-progress">
+    <div id="scroll-progress-bar"></div>
+  </div>
+
   <!-- ======= Mobile nav toggle button ======= -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
@@ -50,8 +63,6 @@
           <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
           <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Experience</span></a></li>
           <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Projects</span></a></li>
-          <!-- <li><a href="#publications" class="nav-link scrollto"><i class="bi bi-journal-bookmark-fill"></i> <span>Publications</span></a></li> -->
-          <li><a href="#Certifications" class="nav-link scrollto"><i class="bx bx-certification"></i> <span>Certificates</span></a></li>
           <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
@@ -62,7 +73,7 @@
   <section id="home" class="d-flex flex-column justify-content-center align-items-center">
     <div class="home-container" data-aos="fade-in">
       <h1>Manoj T V</h1>
-      <p>I'm a <span class="typed" data-typed-items="Full Stack Developer, Software Engineer"></span></p>
+      <p>I'm a <span class="typed" data-typed-items="Software Engineer, Full Stack Developer, React Developer, .NET Developer"></span></p>
       <div class="social-links mt-3 text-center" style="font-size: xx-large">
         <a href="mailto:manojtvmtv@gmail.com" class="mail" target="_blank"><i class="bi bi-envelope" style="color: white;"></i></a>
         <a href="https://www.linkedin.com/in/manoj-t-v-mtv/" target="_blank" class="linkedin"><i class="bx bxl-linkedin" style="color: white;"></i></a>
@@ -125,31 +136,115 @@
     </section><!-- End About Section -->
 
 
-    <!-- TODO : add skills into left bar -->
     <!-- ======= Skills Section ======= -->
     <section id="skills" class="skills section-bg">
       <div class="container">
 
         <div class="section-title">
-          <h2>Skills</h2>
-          <p><strong> Languages:</strong>
-            C#, JavaScript, C++/C, Python
-         </p>
-         <p><strong> Frameworks:</strong>
-          ASP.NET Core/MVC, ReactJS, Vue.js, ExpressJS/NodeJs, Django
-       </p>
-       <p><strong> Cloud/Databases:</strong>
-        Microsoft Azure, MySQL, MS SQL Server, MongoDB
-     </p>
-     <p><strong> Web Technologies:</strong>
-      REST APIs, SignalR, JQuery, AJAX, Microservices
-   </p>
-   <p><strong> Tools:</strong>
-    Jenkins, Docker, Figma, Visual Studio, VS Code, Git, GitHub, SSMS, Trace32, IBM Rational, Microsoft Office
-  </p>
-   <p><strong> Certificates:</strong>
-    Microsoft AI900
-  </p>
+          <h2>Skills & Expertise</h2>
+        </div>
+
+        <div class="row skills-content">
+          <div class="col-lg-6">
+            <div class="skill-category-card">
+              <div class="skill-category-header">
+                <i class="bx bx-code-alt"></i>
+                <h3>Languages</h3>
+              </div>
+              <div class="skill-tags-grid">
+                <span class="skill-badge skill-badge-primary">C#</span>
+                <span class="skill-badge skill-badge-primary">JavaScript</span>
+                <span class="skill-badge skill-badge-primary">C++/C</span>
+                <span class="skill-badge skill-badge-primary">Python</span>
+              </div>
+            </div>
+
+            <div class="skill-category-card">
+              <div class="skill-category-header">
+                <i class="bx bx-layer"></i>
+                <h3>Frameworks</h3>
+              </div>
+              <div class="skill-tags-grid">
+                <span class="skill-badge skill-badge-success">ASP.NET Core/MVC</span>
+                <span class="skill-badge skill-badge-success">ReactJS</span>
+                <span class="skill-badge skill-badge-success">Vue.js</span>
+                <span class="skill-badge skill-badge-success">ExpressJS/NodeJs</span>
+                <span class="skill-badge skill-badge-success">Django</span>
+              </div>
+            </div>
+
+            <div class="skill-category-card">
+              <div class="skill-category-header">
+                <i class="bx bx-cloud"></i>
+                <h3>Cloud & Databases</h3>
+              </div>
+              <div class="skill-tags-grid">
+                <span class="skill-badge skill-badge-info">Microsoft Azure</span>
+                <span class="skill-badge skill-badge-info">MySQL</span>
+                <span class="skill-badge skill-badge-info">MS SQL Server</span>
+                <span class="skill-badge skill-badge-info">MongoDB</span>
+              </div>
+            </div>
+
+            <div class="skill-category-card">
+              <div class="skill-category-header">
+                <i class="bx bx-brain"></i>
+                <h3>AI & GenAI</h3>
+              </div>
+              <div class="skill-tags-grid">
+                <span class="skill-badge skill-badge-ai">GenAI</span>
+                <span class="skill-badge skill-badge-ai">AI Agentic Workflows</span>
+                <span class="skill-badge skill-badge-ai">MCP Tools</span>
+                <span class="skill-badge skill-badge-ai">AI Chatbots</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="skill-category-card">
+              <div class="skill-category-header">
+                <i class="bx bx-world"></i>
+                <h3>Web Technologies</h3>
+              </div>
+              <div class="skill-tags-grid">
+                <span class="skill-badge skill-badge-warning">REST APIs</span>
+                <span class="skill-badge skill-badge-warning">SignalR</span>
+                <span class="skill-badge skill-badge-warning">WebSockets</span>
+                <span class="skill-badge skill-badge-warning">JQuery</span>
+                <span class="skill-badge skill-badge-warning">AJAX</span>
+                <span class="skill-badge skill-badge-warning">Microservices</span>
+              </div>
+            </div>
+
+            <div class="skill-category-card">
+              <div class="skill-category-header">
+                <i class="bx bx-wrench"></i>
+                <h3>Tools & DevOps</h3>
+              </div>
+              <div class="skill-tags-grid">
+                <span class="skill-badge skill-badge-danger">Jenkins</span>
+                <span class="skill-badge skill-badge-danger">Docker</span>
+                <span class="skill-badge skill-badge-danger">Git/GitHub</span>
+                <span class="skill-badge skill-badge-danger">Visual Studio</span>
+                <span class="skill-badge skill-badge-danger">VS Code</span>
+                <span class="skill-badge skill-badge-danger">Figma</span>
+                <span class="skill-badge skill-badge-danger">SSMS</span>
+              </div>
+            </div>
+
+            <div class="skill-category-card">
+              <div class="skill-category-header">
+                <i class="bx bx-award"></i>
+                <h3>Certifications</h3>
+              </div>
+              <div class="skill-tags-grid">
+                <span class="skill-badge skill-badge-certificate">
+                  <i class="bx bx-certification"></i>
+                  Microsoft AI900
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -255,7 +350,7 @@
           <div class="swiper-wrapper align-items-center">
 
             <div class="swiper-slide">
-              <img src="" style="height: 250px;width: 500px;" alt="">
+              <div style="height: 250px;width: 100%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">Productvault</div>
             </div>
 
           </div>
@@ -266,15 +361,15 @@
       <div class="card-body">
         <div class="card-category-box">
           <div class="card-category">
-            <h6 class="category"><span class="badge badge-primary">MERN</span></h6>
+            <h6 class="category"><span class="badge badge-primary">ASP.NET Core</span> <span class="badge badge-primary">React</span> <span class="badge badge-primary">SQL</span> <span class="badge badge-primary">Azure</span></h6>
           </div>
         </div>
 
         <h3 class="card-title">
-         <a href="">Trello</a>
+         <a href="#">Productvault</a>
          </h3>
         <p class="card-description">
- Developed a task management application akin to Trello, incorporating drag-and-drop functionality. Implemented user authentication features, including Google OAuth integration for seamless access
+          Developed a cloud-based repository hosted on Azure for managing Delta IABG product data. Enabled updates for DIA Selector; implemented price updates, product image uploads, and catalog DDF file support.
 <br>
         </p>
 
@@ -288,7 +383,7 @@
           <div class="swiper-wrapper align-items-center">
 
             <div class="swiper-slide">
-              <img src="" style="height: 250px;width: 500px;" alt="">
+              <div style="height: 250px;width: 100%; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">DIASelector</div>
             </div>
 
           </div>
@@ -299,16 +394,15 @@
       <div class="card-body">
         <div class="card-category-box">
           <div class="card-category">
-            <h6 class="category"><span class="badge badge-primary">Django, Redis, Postgres, Celery, Docker</span></h6>
+            <h6 class="category"><span class="badge badge-primary">ASP.NET MVC</span> <span class="badge badge-primary">SQL Server</span> <span class="badge badge-primary">Azure</span> <span class="badge badge-primary">Telerik UI</span></h6>
           </div>
         </div>
 
         <h3 class="card-title">
-         <a href="">Recipe Management</a>
+         <a href="#">DIASelector</a>
          </h3>
         <p class="card-description">
-          • Developed a robust Recipe API using Django and Django REST Framework, incorporating user authentication features for seamless access.
-
+          Built a tool to search, compare, and select Delta's automation products efficiently. Integrated BOM generation, email feature, accessory suggestions, and documentation download.
 <br>
         </p>
 
@@ -530,40 +624,6 @@ transactions.
 
       </div>
     </section><!-- End Portfolio Section -->
-
-    <section id="Certifications" class="portfolio section-bg">
-       <div class="container">
-
-        <div class="section-title">
-          <h2>Certificates & Courses</h2>
-        </div>
-        <h5><i class="bi bi-arrow-right-short">Microsoft AI900 - Microsoft Azure AI Fundamentals</i></h5>
-        <ul>
-          <li>Certified in Microsoft Azure AI Fundamentals, demonstrating knowledge of AI and machine learning concepts on Azure</li>
-        </ul>
-        
-        <h5><i class="bi bi-arrow-right-short">Attended the Microsoft AI Classroom Series conducted by Microsoft</i></h5>
-        <ul>
-          
-        </ul>
-        
-        <h5><i class="bi bi-arrow-right-short">Earned a certificate upon completion of C++ beginner to advance course in Udemy</i></h5>
-        <ul>
-          
-        </ul>
-
- <!-- <div class="row"> 
-  <div class="col-md-4">
-    <div class="card card-blog">
-      <div class="card-img">
-        <img src="assets/img/portfolio/certificate_hackfest.PNG" alt="" class="img-fluid">
-      </div>
-          
-</div> -->
-
-
-      </div>
-    </section>
 
     <section id="extra-curricular" class="portfolio section-bg">
       <div class="container">

@@ -8,6 +8,37 @@
   "use strict";
 
   /**
+   * Preloader
+   */
+  const preloader = document.querySelector('#preloader');
+  if (preloader) {
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        preloader.style.opacity = '0';
+        setTimeout(() => {
+          preloader.style.display = 'none';
+        }, 500);
+      }, 1000);
+    });
+  }
+
+  /**
+   * Scroll Progress Indicator
+   */
+  const updateScrollProgress = () => {
+    const scrollProgressBar = document.getElementById('scroll-progress-bar');
+    if (scrollProgressBar) {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrollPercentage = (scrollTop / scrollHeight) * 100;
+      scrollProgressBar.style.width = scrollPercentage + '%';
+    }
+  };
+  
+  window.addEventListener('scroll', updateScrollProgress);
+  window.addEventListener('load', updateScrollProgress);
+
+  /**
    * Easy selector helper function
    */
   const select = (el, all = false) => {
